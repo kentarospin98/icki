@@ -10,4 +10,4 @@ COPY ./main.py /main.py
 
 # Run the start script, it will check for an /app/prestart.sh script (e.g. for migrations)
 # And then will start Gunicorn with Uvicorn
-ENTRYPOINT ["gunicorn", "-b", "0.0.0.0:8000", "-w", "2", "-k", "uvicorn.workers.UvicornWorker", "main:app"]
+ENTRYPOINT ["gunicorn", "-b", "0.0.0.0:80", "-w", "2", "-k", "uvicorn.workers.UvicornWorker", "main:app"]
