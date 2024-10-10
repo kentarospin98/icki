@@ -38,6 +38,7 @@ async def split_audio(source_audio: UploadFile):
     try:
         origin, separated = model.separate_audio_file(filename)
     except Exception as e:
+        print(e)
         return Response(status_code=500, content='{"error": "Failed to split audio."}')
     finally:
         os.remove(filename)
