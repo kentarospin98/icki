@@ -15,7 +15,7 @@ if torch.cuda.device_count() == 0:
 if device is None:
     raise RuntimeError("No Cuda Device found")
 print(device)
-model = demucs.api.Separator("htdemucs", device="cuda", progress=True)
+model = demucs.api.Separator("hdemucs_mmi", device="cuda", progress=True)
 # Initialize with default parameters:
 #separator = demucs.api.Separator()
 
